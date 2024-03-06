@@ -2,6 +2,6 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        new Helicopter_Form().setVisible(true);
+        new Submarine_Form().setVisible(true);
     }
 }
