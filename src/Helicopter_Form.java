@@ -40,7 +40,7 @@ public class Helicopter_Form extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(459, 401));
+        setPreferredSize(new java.awt.Dimension(459, 430));
 
         jTextField1.setEditable(false);
         jTextField1.setText("Area Not Cleared");
@@ -63,15 +63,23 @@ public class Helicopter_Form extends javax.swing.JFrame {
         //jSlider1.setValueIsAdjusting();
 
         jButton1.setText("Shoot");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
+        jButton1.setEnabled(false);
+        jButton1.addActionListener(e ->  {
+
+//            methana main control eke splitter eke value eka anuwa wens wena ona
+//
+//            if ( Main_Controller_Form == null) {
+//                jButton1.setEnabled(true);
+//            }
+
+
         });
 
         jButton2.setText("Missile Operation");
+        jButton2.setEnabled(false);
 
         jButton3.setText("Laser Operation");
+        jButton3.setEnabled(false);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
