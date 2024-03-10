@@ -6,7 +6,7 @@ public class WarTank_Form extends javax.swing.JFrame implements Observer {
     }
 
     @Override
-    public void update(String text, String name) {
+    public void sendData(String text, String name) {
 
     }
 

@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f72ce081-1d72-4684-9773-37c344fa97cd" name="Changes" comment="Editing">
-      <change afterPath="$PROJECT_DIR$/src/Observeble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WarTank_Form.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StrengthLevels.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Helicopter_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helicopter_Form.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main_Controller_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main_Controller_Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Observeble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observeble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Submarine_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Submarine_Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WarTank_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarTank_Form.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +28,26 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sithum-sandaruwan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a0d41971-8fa0-4a5d-a670-d28b3f7be8cc" />
+        <option name="url" value="https://github.com/sithum-sandaruwan/Defense_System.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -39,26 +55,26 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2dJ3UQ5iwqgQub2h8lpM4wRVbmr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/ICET Documents/Chat-System",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ICET Documents/Chat-System&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -98,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709736390308</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Editing">
+      <option name="closed" value="true" />
+      <created>1710067393545</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710067393546</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
