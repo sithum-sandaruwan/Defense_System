@@ -1,10 +1,14 @@
 
-public class Submarine_Form extends javax.swing.JFrame {
+public class Submarine_Form extends javax.swing.JFrame implements Observer{
 
     public Submarine_Form() {
         initComponents();
     }
 
+    @Override
+    public void update(String text, String name) {
+
+    }
 
     @SuppressWarnings("unchecked")
     private void initComponents() {

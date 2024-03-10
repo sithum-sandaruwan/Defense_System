@@ -1,6 +1,6 @@
 
 
-public class Main_Controller_Form extends javax.swing.JFrame {
+public class Main_Controller_Form extends javax.swing.JFrame implements Observer{
 
 
     private javax.swing.JButton jButton1;
@@ -22,9 +22,14 @@ public class Main_Controller_Form extends javax.swing.JFrame {
 
 
     public Main_Controller_Form() {
+
         initComponents();
     }
 
+    @Override
+    public void update(String text, String name) {
+
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
@@ -93,6 +98,7 @@ public class Main_Controller_Form extends javax.swing.JFrame {
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setBorder(null);
+
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -192,7 +198,8 @@ public class Main_Controller_Form extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
+
     }
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,9 +213,6 @@ public class Main_Controller_Form extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
-
-
-
 
 
 }
