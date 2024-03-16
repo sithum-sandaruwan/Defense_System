@@ -1,19 +1,13 @@
+package defense_system;
 
-public class WarTank_Form extends javax.swing.JFrame implements Observer {
-
-    public WarTank_Form() {
+public class War_Tank_Form extends javax.swing.JFrame implements Observer {
+    public War_Tank_Form() {
         initComponents();
-    }
-
-    @Override
-    public void sendData(String text, String name) {
-
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
-
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -29,7 +23,9 @@ public class WarTank_Form extends javax.swing.JFrame implements Observer {
         jSpinner1 = new javax.swing.JSpinner();
         jSpinner2 = new javax.swing.JSpinner();
         jSlider1 = new javax.swing.JSlider();
+        jLabel3 = new javax.swing.JLabel();
 
+        setTitle("War Tank");
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("Shoot");
@@ -50,6 +46,8 @@ public class WarTank_Form extends javax.swing.JFrame implements Observer {
         jButton4.setEnabled(false);
 
         jTextField1.setText("Area Not Cleared");
+        jTextField1.setEditable(false);
+        jTextField1.setBorder(null);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -61,6 +59,11 @@ public class WarTank_Form extends javax.swing.JFrame implements Observer {
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton5.setText("Send");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jCheckBox1.setText("Position");
 
@@ -73,6 +76,14 @@ public class WarTank_Form extends javax.swing.JFrame implements Observer {
         jSpinner2.setValue(0);
 
         jSlider1.setOrientation(javax.swing.JSlider.VERTICAL);
+        jSlider1.setMajorTickSpacing(20);
+        jSlider1.setMinorTickSpacing(5);
+        jSlider1.setPaintLabels(true);
+        jSlider1.setPaintTicks(true);
+        jSlider1.setValue(100);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setText("TANK");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -164,37 +175,15 @@ public class WarTank_Form extends javax.swing.JFrame implements Observer {
         // TODO add your handling code here:
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(WarTank_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(WarTank_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(WarTank_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(WarTank_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        Observable.getInstance().getMassage(getTitle(), jTextField2.getText());
+    }
 
-        /* Create and display the form */
+    public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new WarTank_Form().setVisible(true);
+                new War_Tank_Form().setVisible(true);
             }
         });
     }
@@ -208,6 +197,7 @@ public class WarTank_Form extends javax.swing.JFrame implements Observer {
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JSpinner jSpinner1;
@@ -216,4 +206,20 @@ public class WarTank_Form extends javax.swing.JFrame implements Observer {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration
+
+    @Override
+    public String updateArea(String situation) {
+
+        return situation;
+    }
+
+    @Override
+    public void sendStrength(int strength) {
+
+    }
+
+    @Override
+    public void update(String name, String text) {
+
+    }
 }

@@ -1,17 +1,15 @@
-import java.awt.event.ActionEvent;
+package defense_system;
 
-public class Helicopter_Form extends javax.swing.JFrame implements Observer{
-
+public class Helicopter_Form extends javax.swing.JFrame implements Observer {
+    private String situation;
 
     public Helicopter_Form() {
         initComponents();
     }
 
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
-
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -28,11 +26,13 @@ public class Helicopter_Form extends javax.swing.JFrame implements Observer{
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabel3 = new javax.swing.JLabel();
 
+        setTitle("Helicopter");
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(459, 401));
 
         jTextField1.setEditable(false);
         jTextField1.setText("Area Not Cleared");
+        jTextField1.setBorder(null);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -43,14 +43,16 @@ public class Helicopter_Form extends javax.swing.JFrame implements Observer{
 
         jLabel2.setText("Soldier Count");
 
-        jSpinner1.setValue(0
-        );
+        jSpinner1.setValue(0);
 
         jSpinner2.setValue(0);
 
         jSlider1.setOrientation(javax.swing.JSlider.VERTICAL);
-        jSlider1.setValue(0
-        );
+        jSlider1.setMajorTickSpacing(20);
+        jSlider1.setMinorTickSpacing(5);
+        jSlider1.setPaintLabels(true);
+        jSlider1.setPaintTicks(true);
+        jSlider1.setValue(100);
         jSlider1.setValueIsAdjusting(true);
 
         jButton1.setText("Shoot");
@@ -71,7 +73,7 @@ public class Helicopter_Form extends javax.swing.JFrame implements Observer{
         btnSend.setText("Send");
         btnSend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-             //   jButton4ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -178,11 +180,11 @@ public class Helicopter_Form extends javax.swing.JFrame implements Observer{
     }// </editor-fold>
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
-        Observeble.getinstace().getMassage(jTextField2.getText(),jLabel3.getText());
+        Observable.getInstance().getMassage(getTitle(), jTextField2.getText());
     }
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
-
+        jTextField1.setText(situation);
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,11 +195,7 @@ public class Helicopter_Form extends javax.swing.JFrame implements Observer{
         // TODO add your handling code here:
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Helicopter_Form().setVisible(true);
@@ -224,12 +222,19 @@ public class Helicopter_Form extends javax.swing.JFrame implements Observer{
     // End of variables declaration
 
     @Override
-    public void sendData(String text,String name) {
-        if(jLabel3.getText()==name){
-            jTextArea1.append("Me : "+text+"\n");
-        }else{
-            jTextArea1.append(name+" : "+text+"\n");
-        }
-        System.out.println(text);
+    public String updateArea(String situation) {
+        jTextField1.setText(situation);
+        return situation;
+
+    }
+
+    @Override
+    public void sendStrength(int strength) {
+
+    }
+
+    @Override
+    public void update(String name, String text) {
+
     }
 }

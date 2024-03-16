@@ -1,18 +1,14 @@
+package defense_system;
 
-public class Submarine_Form extends javax.swing.JFrame implements Observer{
+public class Submarine_Form extends javax.swing.JFrame implements Observer {
+    private String situation;
 
     public Submarine_Form() {
         initComponents();
     }
 
-    @Override
-    public void sendData(String text, String name) {
-
-    }
-
     @SuppressWarnings("unchecked")
     private void initComponents() {
-
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -31,11 +27,14 @@ public class Submarine_Form extends javax.swing.JFrame implements Observer{
         jButton5 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
+        setTitle("Submarine");
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextField1.setEditable(false);
         jTextField1.setText("Area Not Cleared");
+        jTextField1.setBorder(null);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -75,8 +74,18 @@ public class Submarine_Form extends javax.swing.JFrame implements Observer{
         });
 
         jSlider1.setOrientation(javax.swing.JSlider.VERTICAL);
+        jSlider1.setMajorTickSpacing(20);
+        jSlider1.setMinorTickSpacing(5);
+        jSlider1.setPaintLabels(true);
+        jSlider1.setPaintTicks(true);
+        jSlider1.setValue(100);
 
         jSlider2.setOrientation(javax.swing.JSlider.VERTICAL);
+        jSlider2.setMajorTickSpacing(20);
+        jSlider2.setMinorTickSpacing(5);
+        jSlider2.setPaintLabels(true);
+        jSlider2.setPaintTicks(true);
+        jSlider2.setValue(100);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -92,6 +101,9 @@ public class Submarine_Form extends javax.swing.JFrame implements Observer{
         jLabel3.setText("Energy");
 
         jLabel4.setText("Oxygen");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("SUBMARINE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -194,7 +206,7 @@ public class Submarine_Form extends javax.swing.JFrame implements Observer{
     }// </editor-fold>
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        jTextField1.setText(situation);
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,36 +219,10 @@ public class Submarine_Form extends javax.swing.JFrame implements Observer{
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+        Observable.getInstance().getMassage(getTitle(), jTextField2.getText());
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Submarine_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Submarine_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Submarine_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Submarine_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Submarine_Form().setVisible(true);
@@ -255,6 +241,7 @@ public class Submarine_Form extends javax.swing.JFrame implements Observer{
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JSlider jSlider2;
@@ -264,4 +251,20 @@ public class Submarine_Form extends javax.swing.JFrame implements Observer{
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration
+
+    @Override
+    public String updateArea(String situation) {
+        this.situation = situation;
+        return situation;
+    }
+
+    @Override
+    public void sendStrength(int strength) {
+
+    }
+
+    @Override
+    public void update(String name, String text) {
+
+    }
 }

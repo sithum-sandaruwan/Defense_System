@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f72ce081-1d72-4684-9773-37c344fa97cd" name="Changes" comment="Editing">
-      <change afterPath="$PROJECT_DIR$/src/StrengthLevels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/defense_system/Helicopter_Form.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/defense_system/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/defense_system/Main_Controller_Form.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/defense_system/Observable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/defense_system/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/defense_system/Submarine_Form.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/defense_system/War_Tank_Form.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helicopter_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helicopter_Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main_Controller_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main_Controller_Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Observeble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observeble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Submarine_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Submarine_Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WarTank_Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarTank_Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helicopter_Form.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main_Controller_Form.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Observeble.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Observer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StrengthLevels.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Submarine_Form.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WarTank_Form.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -52,6 +60,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -64,18 +75,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ICET Documents/Chat-System&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Helicopter_Form.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.defense_system.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/ICET Documents/Chat-System",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="defense_system" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.defense_system.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Defense_System" />
@@ -83,6 +105,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="defense_system.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="defense_system.Main" />
+      <module name="Defense_System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="defense_system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.defense_system.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -122,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710067393546</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Editing">
+      <option name="closed" value="true" />
+      <created>1710095030726</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710095030726</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

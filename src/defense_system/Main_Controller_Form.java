@@ -1,7 +1,26 @@
+package defense_system;
 
+import java.awt.event.ActionEvent;
 
-public class Main_Controller_Form extends javax.swing.JFrame implements Observer{
+public class Main_Controller_Form extends javax.swing.JFrame implements Observer {
 
+    private Observer observer = new Observer() {
+        @Override
+        public String updateArea(String situation) {
+
+            return situation;
+        }
+
+        @Override
+        public void sendStrength(int level) {
+
+        }
+
+        @Override
+        public void update(String name, String text) {
+
+        }
+    };
 
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -18,23 +37,17 @@ public class Main_Controller_Form extends javax.swing.JFrame implements Observer
     private javax.swing.JSlider jSlider1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-
-
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
 
     public Main_Controller_Form() {
-
         initComponents();
-    }
-
-    @Override
-    public void sendData(String text, String name) {
-
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
-
         jCheckBox1 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -50,7 +63,11 @@ public class Main_Controller_Form extends javax.swing.JFrame implements Observer
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
+        jTextArea1 = new javax.swing.JTextArea();
+        jTextArea2 = new javax.swing.JTextArea();
+        jTextArea3 = new javax.swing.JTextArea();
 
+        setTitle("Main Controller");
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jCheckBox1.setText("Area Clear");
@@ -62,7 +79,7 @@ public class Main_Controller_Form extends javax.swing.JFrame implements Observer
 
         jButton1.setText("Collect Information");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Defense", "Helicopter", "War Tank", "Submarine" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -88,12 +105,15 @@ public class Main_Controller_Form extends javax.swing.JFrame implements Observer
 
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane2.setViewportView(jTextArea1);
 
         jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane4.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane4.setViewportView(jTextArea2);
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane1.setViewportView(jTextArea3);
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
@@ -108,6 +128,14 @@ public class Main_Controller_Form extends javax.swing.JFrame implements Observer
         jTextField2.setEditable(false);
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
         jTextField2.setBorder(null);
+
+        jSlider1.setMajorTickSpacing(20);
+        jSlider1.setMinorTickSpacing(5);
+        jSlider1.setPaintLabels(true);
+        jSlider1.setPaintTicks(true);
+        jSlider1.setValue(0);
+        jSlider1.getAccessibleContext().setAccessibleName("");
+        jSlider1.getAccessibleContext().setAccessibleDescription("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -191,19 +219,16 @@ public class Main_Controller_Form extends javax.swing.JFrame implements Observer
                                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        jSlider1.getAccessibleContext().setAccessibleName("");
-        jSlider1.getAccessibleContext().setAccessibleDescription("");
-
         pack();
     }// </editor-fold>
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {
-
-
+    private void jCheckBox1ActionPerformed(ActionEvent evt) {
+        // TODO add your handling code here:
+        observer.updateArea(jCheckBox1.isSelected() ? "Area Cleared" : "Area Not Cleared");
+        System.out.println(jCheckBox1.isSelected() ? "Area Cleared" : "Area Not Cleared");
     }
-
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {
-
+        // TODO add your handling code here:
     }
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,5 +239,23 @@ public class Main_Controller_Form extends javax.swing.JFrame implements Observer
         // TODO add your handling code here:
     }
 
+    @Override
+    public String updateArea(String situation) {
+        jTextField1.setText(situation);
+        return situation;
+    }
 
+    @Override
+    public void sendStrength(int strength) {
+
+    }
+
+    @Override
+    public void update(String name, String text) {
+        if (getTitle() == name) {
+            jTextArea1.append("Me : " + text + "\n");
+        } else {
+            jTextArea1.append(name + " : " + text + "\n");
+        }
+    }
 }
